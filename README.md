@@ -27,13 +27,14 @@ Onloc is a service that allows you to track and locate your devices. This reposi
 
 1. Create a new directory.
 ```
-mkdir onloc-app
-cd onloc-app
+mkdir ./onloc-app
+cd ./onloc-app
 ```
 
 2. Install the necessary files from the latest release.
 ```
-TODO
+wget -O docker-compose.yml https://github.com/Calvicii/onloc-deployment/releases/latest/download/docker-compose.yml
+wget -O nginx.conf https://github.com/Calvicii/onloc-deployment/releases/latest/download/nginx.conf
 ```
 
 3. Start
