@@ -37,10 +37,12 @@ wget -O docker-compose.yml https://github.com/Calvicii/onloc-deployment/releases
 wget -O nginx.conf https://github.com/Calvicii/onloc-deployment/releases/latest/download/nginx.conf
 ```
 
-3. Start
+3. Start the containers.
 ```
 docker compose pull && docker compose up -d
 ```
+
+Onloc is now running on port **6144**.
 
 ## Update
 ```
