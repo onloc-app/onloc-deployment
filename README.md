@@ -13,7 +13,7 @@
 > - **Do not use the app as the only way to locate your devices.**
 
 ## Description
-Onloc is service that let's you track and locate your devices. This repository contains files and instructions to install and setup Onloc.
+Onloc is a service that allows you to track and locate your devices. This repository contains files and instructions to install and setup Onloc.
 
 > [!NOTE]
 > You can find the other repositories here:
