@@ -22,7 +22,7 @@ services:
     image: calvicii/onloc-ui
     container_name: onloc-ui
     environment:
-      - REACT_APP_API_URL=http://onloc-api:8000
+      - REACT_APP_API_URL=/api
     ports:
       - "3000:3000" # Expose React UI on port 3000
     depends_on:
