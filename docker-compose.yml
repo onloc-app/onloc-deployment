@@ -4,14 +4,10 @@ services:
     image: calvicii/onloc-api
     container_name: onloc-api
     environment:
-      - DB_CONNECTION=pgsql
-      - DB_HOST=db
-      - DB_PORT=5432
-      - DB_DATABASE=onloc
-      - DB_USERNAME=onloc
-      - DB_PASSWORD=onloc
+      - DATABASE_URL=postgresql://onloc:onloc@db:5432/onloc?schema=public
+      - PORT=4000
     ports:
-      - "8000:8000" # Expose Laravel API on port 8000
+      - "4000:4000"
     depends_on:
       db:
         condition: service_healthy
@@ -24,7 +20,7 @@ services:
     environment:
       - REACT_APP_API_URL=/api
     ports:
-      - "3000:3000" # Expose React UI on port 3000
+      - "3000:3000"
     depends_on:
       - api
     restart: unless-stopped
@@ -36,7 +32,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     ports:
-      - "6144:6144" # Expose Nginx on port 6144
+      - "6144:6144"
     depends_on:
       - api
       - ui
@@ -51,11 +47,11 @@ services:
       POSTGRES_USER: onloc
       POSTGRES_PASSWORD: onloc
     ports:
-      - "5432:5432" # Expose PostgreSQL on port 5432
+      - "5432:5432"
     volumes:
       - ./data:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U onloc" ]
+      test: ["CMD-SHELL", "pg_isready -U onloc"]
       interval: 5s
       timeout: 5s
       retries: 5
