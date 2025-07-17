@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Calvicii/onloc-ui/refs/heads/main/public/favicon.svg" height="120"/>
+    <img src="https://raw.githubusercontent.com/Onloc-Code/onloc-ui/refs/heads/main/public/favicon.svg" height="120"/>
 </p>
 
 ## Disclaimer
@@ -17,9 +17,9 @@ Onloc is a service that allows you to track and locate your devices. This reposi
 
 > [!NOTE]
 > You can find the other repositories here:
-> - Front-end: https://github.com/Calvicii/onloc-ui
-> - Back-end: https://github.com/Calvicii/onloc-api
-> - Android: https://github.com/Calvicii/onloc-android
+> - Front-end: https://github.com/Onloc-Code/onloc-ui
+> - Back-end: https://github.com/Onloc-Code/onloc-api
+> - Android: https://github.com/Onloc-Code/onloc-android
 
 ## Installation
 > [!NOTE]
@@ -33,8 +33,8 @@ cd ./onloc-app
 
 2. Install the necessary files from the latest release.
 ```
-wget -O docker-compose.yml https://github.com/Calvicii/onloc-deployment/releases/latest/download/docker-compose.yml
-wget -O nginx.conf https://github.com/Calvicii/onloc-deployment/releases/latest/download/nginx.conf
+wget -O docker-compose.yml https://github.com/Onloc-Code/onloc-deployment/releases/latest/download/docker-compose.yml
+wget -O nginx.conf https://github.com/Onloc-Code/onloc-deployment/releases/latest/download/nginx.conf
 ```
 
 3. Start the containers.
