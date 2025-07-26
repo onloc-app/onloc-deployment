@@ -7,7 +7,7 @@ services:
       - DATABASE_URL=postgresql://onloc:onloc@db:5432/onloc?schema=public
       - PORT=4000
     ports:
-      - "4000:4000"
+      - "6145:4000"
     depends_on:
       db:
         condition: service_healthy
@@ -18,26 +18,13 @@ services:
     image: calvicii/onloc-ui
     container_name: onloc-ui
     environment:
-      - REACT_APP_API_URL=/api
-      - REACT_APP_SERVER_URL=/
+      - REACT_APP_API_PORT=6145
+      - REACT_APP_WS_PORT=6145
       - HOST=0.0.0.0
     ports:
-      - "3000:3000"
+      - "6144:3000"
     depends_on:
       - api
-    restart: unless-stopped
-
-  # Nginx for proxying requests
-  nginx:
-    image: nginx:latest
-    container_name: onloc-nginx
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    ports:
-      - "6144:6144"
-    depends_on:
-      - api
-      - ui
     restart: unless-stopped
 
   # PostgreSQL Database
