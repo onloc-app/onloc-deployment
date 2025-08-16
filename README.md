@@ -39,7 +39,7 @@ cd ./onloc-app
 2. Install the necessary files from the latest release.
 
 ```
-wget -O docker-compose.yml https://github.com/Onloc-Code/onloc-deployment/releases/latest/download/docker-compose.yml
+curl -O https://github.com/Onloc-Code/onloc-deployment/releases/latest/download/docker-compose.yml
 ```
 
 3. Start the containers.
