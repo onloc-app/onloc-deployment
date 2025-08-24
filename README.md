@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/Onloc-Code/onloc-ui/refs/heads/main/public/favicon.svg" height="120"/>
+    <img src="https://raw.githubusercontent.com/onloc-app/onloc-ui/refs/heads/main/public/favicon.svg" height="120"/>
 </p>
 
 ## Disclaimer
@@ -21,9 +21,9 @@ Onloc is a service that allows you to track and locate your devices. This reposi
 > [!NOTE]
 > You can find the other repositories here:
 >
-> - Front-end: https://github.com/Onloc-Code/onloc-ui
-> - Back-end: https://github.com/Onloc-Code/onloc-api
-> - Android: https://github.com/Onloc-Code/onloc-android
+> - Front-end: https://github.com/onloc-app/onloc-ui
+> - Back-end: https://github.com/onloc-app/onloc-api
+> - Android: https://github.com/onloc-app/onloc-android
 
 ## Installation
 
@@ -39,7 +39,7 @@ cd ./onloc-app
 2. Install the necessary files from the latest release.
 
 ```
-curl -O https://github.com/Onloc-Code/onloc-deployment/releases/latest/download/docker-compose.yml
+curl -O https://github.com/onloc-app/onloc-deployment/releases/latest/download/docker-compose.yml
 ```
 
 3. Start the containers.
