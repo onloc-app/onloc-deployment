@@ -27,7 +27,8 @@ Onloc is a service that allows you to track and locate your devices. This reposi
 
 ## Installation
 
-> [!NOTE] > **Docker** is **required** to install this project. It is currently the only install method.
+> [!NOTE]
+> **Docker** is **required** to install this project. It is currently the only install method.
 
 1. Create a new directory.
 
