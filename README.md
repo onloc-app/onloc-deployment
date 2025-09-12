@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://opensource.org/license/gpl-3-0"><img src="https://img.shields.io/badge/License-GPL_v3-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec" alt="License: GPLv3"></a>
+  <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/License-MIT-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec" alt="License: GPLv3"></a>
 </p>
 
 <p align="center">
