@@ -18,8 +18,8 @@ services:
     image: calvicii/onloc-ui:latest
     container_name: onloc-ui
     environment:
-      - REACT_APP_API_PORT=6145
-      - REACT_APP_WS_PORT=6145
+      - VITE_API_PORT=6145
+      - VITE_WS_PORT=6145
       - HOST=0.0.0.0
     ports:
       - "6144:3000"
