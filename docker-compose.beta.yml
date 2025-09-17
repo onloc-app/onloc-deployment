@@ -1,7 +1,7 @@
 services:
   # API service (Express)
   api:
-    image: calvicii/onloc-api:latest
+    image: calvicii/onloc-api:beta
     container_name: onloc-api
     environment:
       - DATABASE_URL=postgresql://onloc:onloc@db:5432/onloc?schema=public
@@ -15,7 +15,7 @@ services:
 
   # UI service (React)
   ui:
-    image: calvicii/onloc-ui:latest
+    image: calvicii/onloc-ui:beta
     container_name: onloc-ui
     environment:
       - REACT_APP_API_PORT=6145
