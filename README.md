@@ -33,6 +33,7 @@ cd ./onloc-app
 
 ```
 curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/download/docker-compose.yml
+curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/download/Caddyfile
 ```
 
 3. Start the containers.
@@ -41,7 +42,7 @@ curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/downloa
 docker compose pull && docker compose up -d
 ```
 
-Onloc's frontend is now running on port **6144** and the backend on port **6145**.
+Onloc is now running on port **6144**.
 
 ## Update
 
