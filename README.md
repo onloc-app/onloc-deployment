@@ -20,7 +20,7 @@ Onloc is a service that allows you to track and locate your devices. This reposi
 ## Installation
 
 > [!NOTE]
-> **Docker** is **required** to install this project. It is currently the only install method.
+> **Docker** or **Podman** is **required** to install this project. They are currently the only install methods.
 
 1. Create a new directory.
 
@@ -38,14 +38,26 @@ curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/downloa
 
 3. Start the containers.
 
+Docker:
 ```
 docker compose pull && docker compose up -d
+```
+
+Podman:
+```
+podman compose pull && podman compose up -d
 ```
 
 Onloc is now running on port **6144**.
 
 ## Update
 
+Docker:
 ```
 docker compose pull && docker compose up -d
+```
+
+Podman:
+```
+podman compose pull && podman compose up -d
 ```

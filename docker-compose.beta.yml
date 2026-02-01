@@ -28,7 +28,7 @@ services:
 
   # PostgreSQL Database
   db:
-    image: postgres:beta
+    image: postgres:16
     container_name: onloc-db
     environment:
       POSTGRES_DB: onloc
@@ -37,7 +37,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./data:/var/lib/postgresql
+      - ./data:/var/lib/postgresql:Z
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U onloc"]
       interval: 5s
@@ -51,7 +51,7 @@ services:
     ports:
       - "6144:80"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro,Z
     depends_on:
       - api
       - ui
