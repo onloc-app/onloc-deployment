@@ -12,6 +12,8 @@ services:
       db:
         condition: service_healthy
     restart: unless-stopped
+    volumes:
+      - ./uploads:/app/uploads:Z
 
   # UI service (React)
   ui:
