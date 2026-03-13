@@ -3,6 +3,7 @@
     reverse_proxy /api* api:4000
     reverse_proxy /ws* api:4000
     reverse_proxy /docs* api:4000
+    reverse_proxy /uploads* api:4000
 
     # Everything else → frontend (React)
     reverse_proxy ui:3000
