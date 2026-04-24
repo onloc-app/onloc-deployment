@@ -10,53 +10,6 @@
 
 Onloc is a service that allows you to track and locate your devices. This repository contains files and instructions to install and setup Onloc.
 
-> [!NOTE]
-> You can find the other repositories here:
->
-> - Front-end: https://github.com/onloc-app/onloc-ui
-> - Back-end: https://github.com/onloc-app/onloc-api
-> - Android: https://github.com/onloc-app/onloc-android
-
 ## Installation
 
-> [!NOTE]
-> **Docker** or **Podman** is **required** to install this project. They are currently the only install methods.
-
-1. Create a new directory.
-
-```
-mkdir ./onloc-app
-cd ./onloc-app
-```
-
-2. Install the necessary files from the latest release.
-
-```
-curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/download/docker-compose.yml
-```
-
-3. Start the containers.
-
-Docker:
-```
-docker compose pull && docker compose up -d
-```
-
-Podman:
-```
-podman compose pull && podman compose up -d
-```
-
-Onloc is now running on port **6144**.
-
-## Update
-
-Docker:
-```
-docker compose pull && docker compose up -d
-```
-
-Podman:
-```
-podman compose pull && podman compose up -d
-```
+Installation steps can be found on [Onloc's website](https://onloc.app/docs/self-host/installation) or here on GitHub in the [website's repository](https://github.com/onloc-app/onloc-website/blob/main/docs/self-host/installation.mdx).
