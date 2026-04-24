@@ -33,7 +33,6 @@ cd ./onloc-app
 
 ```
 curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/download/docker-compose.yml
-curl -L -O https://github.com/onloc-app/onloc-deployment/releases/latest/download/Caddyfile
 ```
 
 3. Start the containers.
