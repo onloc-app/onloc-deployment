@@ -6,8 +6,14 @@ services:
     environment:
       - DATABASE_URL=postgresql://onloc:onloc@db:5432/onloc?schema=public
       - PORT=4000
-    expose:
-      - "4000"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -qO- http://api:4000/api/health || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     depends_on:
       db:
         condition: service_healthy
@@ -20,31 +26,37 @@ services:
     image: calvicii/onloc-ui:beta
     container_name: onloc-ui
     environment:
-      - HOST=0.0.0.0
       - PORT=3000
-    expose:
-      - "3000"
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -qO- http://ui:3000/health || exit 1"
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     depends_on:
       - api
     restart: unless-stopped
 
   # PostgreSQL Database
   db:
-    image: postgres:16
+    image: postgres:16-alpine
     container_name: onloc-db
     environment:
       POSTGRES_DB: onloc
       POSTGRES_USER: onloc
       POSTGRES_PASSWORD: onloc
-    ports:
-      - "5432:5432"
     volumes:
       - ./data:/var/lib/postgresql/data:Z
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U onloc"]
-      interval: 5s
+      test:
+        - CMD-SHELL
+        - pg_isready -U onloc -d onloc
+      interval: 10s
       timeout: 5s
-      retries: 10
+      retries: 5
+      start_period: 30s
     restart: unless-stopped
 
   caddy:
@@ -52,11 +64,36 @@ services:
     restart: unless-stopped
     ports:
       - "6144:80"
-    volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro,Z
+    configs:
+      - source: caddyfile
+        target: /etc/caddy/Caddyfile
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - "wget -qO- http://caddy:80 || exit 1"
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
     depends_on:
-      - api
-      - ui
+      api:
+        condition: service_healthy
+      ui:
+        condition: service_healthy
+
+configs:
+  caddyfile:
+    content: |
+      :80 {
+        # Proxy API, docs and WebSocket to backend
+        reverse_proxy /api* api:4000
+        reverse_proxy /ws* api:4000
+        reverse_proxy /docs* api:4000
+        reverse_proxy /uploads* api:4000
+
+        # Everything else goes to the frontend
+        reverse_proxy ui:3000
+      }
 
 networks:
   default:
