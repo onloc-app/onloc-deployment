@@ -1,15 +1,17 @@
 <p align="center">
-  <a href="https://opensource.org/license/mit"><img src="https://img.shields.io/badge/License-MIT-blue.svg?color=3F51B5&style=for-the-badge&label=License&logoColor=000000&labelColor=ececec" alt="License: GPLv3"></a>
-</p>
-
-<p align="center">
     <img src="https://raw.githubusercontent.com/onloc-app/onloc-ui/refs/heads/main/public/favicon.svg" height="120"/>
 </p>
 
 ## Description
 Onloc is a self-hosted service that allows you to track and locate your devices.
 
-The project is split into multiple repositories. This one contains the necessary files to install Onloc.
+This repo contains the necessary files to install Onloc.
+
+## License
+This project is composed of multiple repositories, each with its own license. The license for this repository
+does not apply to the other repositories that make up the project.
+
+Before using, modifying, or redistributing any part of this project, please check the license of the corresponding repository.
 
 ## Installation
 Installation steps can be found on [Onloc's website](https://onloc.app/docs/self-host/installation) or here on GitHub in the [website's repository](https://github.com/onloc-app/onloc-website/blob/main/docs/self-host/installation.mdx).
