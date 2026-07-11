@@ -31,8 +31,8 @@ Contribution guide coming soon. PRs are welcomed!
 ## Star History
 <a href="https://www.star-history.com/?repos=onloc-app%2Fonloc&type=date&legend=top-left">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=onloc-app/onloc&type=date&theme=dark&legend=top-left" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=onloc-app/onloc&type=date&legend=top-left" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=onloc-app/onloc&type=date&legend=top-left" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=onloc-app/onloc&type=date&theme=dark&legend=top-left&sealed_token=uwsXY0QRWLvI-ye3M-YHC72eZXJdZ3abCGFGyOAHVmEvt9smxM7aNZsIRacIJe6UZaIg1mmGWuPjK-cwm4LZfloTIwzqZxoKujJ0KY0Mb2xASYkO_2Z2uNFtCRl06XH2qAsI2pFZaRm3pzv2hCTU8uukJEpX8ybvsCssY6qzuLOsagcTXxgd6iwAA409" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=onloc-app/onloc&type=date&legend=top-left&sealed_token=uwsXY0QRWLvI-ye3M-YHC72eZXJdZ3abCGFGyOAHVmEvt9smxM7aNZsIRacIJe6UZaIg1mmGWuPjK-cwm4LZfloTIwzqZxoKujJ0KY0Mb2xASYkO_2Z2uNFtCRl06XH2qAsI2pFZaRm3pzv2hCTU8uukJEpX8ybvsCssY6qzuLOsagcTXxgd6iwAA409" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=onloc-app/onloc&type=date&legend=top-left&sealed_token=uwsXY0QRWLvI-ye3M-YHC72eZXJdZ3abCGFGyOAHVmEvt9smxM7aNZsIRacIJe6UZaIg1mmGWuPjK-cwm4LZfloTIwzqZxoKujJ0KY0Mb2xASYkO_2Z2uNFtCRl06XH2qAsI2pFZaRm3pzv2hCTU8uukJEpX8ybvsCssY6qzuLOsagcTXxgd6iwAA409" />
  </picture>
 </a>
